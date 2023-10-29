@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="item_form">
+  <form >
+    <div th:each="a:${all}">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" th:value="${a.name}" id="name" name="name" readonly>
+      </div>
+
+      <div>
+        <label for="age">나이</label>
+        <input type="text" th:value="${a.age}" id="age" name="age" readonly>
+      </div>
+
+    </div>
+  </form>
+</div>
+</body>
+</html>
